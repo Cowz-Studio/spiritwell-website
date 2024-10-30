@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Spiritwell';
+  src: url('/font/spiritwell.ttf')  format('truetype');
+} 
+
+@layer base{
+  body{
+    @apply font-spiritwell;
+    @apply bg-black;
+    @apply text-white;
+  }
+}
+
+
