@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import spiritWellImage from "./spiritwell_logo.png";
 import maillingList from "./testmail.gif";
 import wishlistOnSteam from "./wishlist_on_steam.jpg";
+import mailingListStatic from "./testmail.jpg";
 ---
 
 <BaseLayout>
@@ -17,7 +18,10 @@ import wishlistOnSteam from "./wishlist_on_steam.jpg";
       And now… 
       Stay updated on development!
     </p>
-    <Picture src={maillingList} alt="Join our mailing list" />
+    <div class="relative">
+      <Picture src={maillingList} width="200" height="200" alt="Join our mailing list" />
+      <Picture src={mailingListStatic} alt="Join our mailing list" class="absolute top-0 left-0 hover:opacity-0"/>
+    </div>
     <p class="text-3xl whitespace-pre-line text-center">
       Join the
       SPIRITWELL
