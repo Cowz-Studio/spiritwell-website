@@ -1,19 +1,27 @@
 ---
-
+import { Picture } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import spiritWellImage from "./spiritwell_logo.png";
+import maillingList from "./testmail.gif";
+import wishlistOnSteam from "./wishlist_on_steam.jpg";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="globals.css" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1 class="text-6xl">Astro</h1>
-    asdjkfhjkasd asdfasdf asdfsad
-    <div class="text-sm">fsdf</div>
-  </body>
-</html>
+<BaseLayout>
+  <section class="flex flex-col items-center">
+    <Picture src={spiritWellImage} alt="Spiritwell logo"/>
+    <a href="https://store.steampowered.com/app/1693890/Spiritwell/">
+      <Picture src={wishlistOnSteam} alt="Wishlist on Steam" />
+
+    </a>
+    <p class="text-xl whitespace-pre-line text-center">
+      And now… 
+      Stay updated on development!
+    </p>
+    <Picture src={maillingList} alt="Join our mailing list" />
+    <p class="text-3xl whitespace-pre-line text-center">
+      Join the
+      SPIRITWELL
+      <span class="text-neutral-500">    MAILING LIST</span>!
+    </p>
+  </section>
+</BaseLayout>
