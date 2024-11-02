@@ -12,6 +12,9 @@
     @apply font-spiritwell;
     @apply bg-black;
     @apply text-white;
+    @apply  outline-4;
+    @apply outline-green-500;
+
   }
 }
 

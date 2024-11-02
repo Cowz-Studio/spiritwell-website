@@ -1,0 +1,18 @@
+---
+import { Picture } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import testmail from "../../pages/testmail.gif";
+import SubscribeForm from "./SubscribeForm";
+---
+
+<BaseLayout>
+  <div class="flex flex-col w-screen items-center gap-y-5">
+    <p class="text-3xl pt-10">Join the MAILING LIST!</p>
+    <div
+      class="flex flex-col items-center gap-y-5 bg-neutral-900 p-4 rounded-2xl"
+    >
+      <Picture src={testmail} alt="Mailing list gif" />
+      <SubscribeForm client:idle />
+    </div>
+  </div>
+</BaseLayout>
