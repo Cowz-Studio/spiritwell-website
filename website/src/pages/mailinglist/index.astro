@@ -1,17 +1,27 @@
 ---
-import { Picture } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import testmail from "../../pages/testmail.gif";
+
 import SubscribeForm from "./SubscribeForm";
 ---
 
 <BaseLayout>
   <div class="flex flex-col w-screen items-center gap-y-5">
-    <p class="text-3xl pt-10">Join the MAILING LIST!</p>
-    <div
-      class="flex flex-col items-center gap-y-5 bg-neutral-900 p-4 rounded-2xl"
-    >
-      <Picture src={testmail} alt="Mailing list gif" />
+    <p class="text-4xl pt-10 px-4">Join the MAILING LIST!</p>
+    <div class="text-2xl max-w-screen-sm px-4">
+      <p class="whitespace-pre-line ">
+        Keep up to date with the development progress of SPIRITWELL! 
+
+        E-mails will include:
+      </p>
+      <ul class="list-disc list-inside">
+        <li>Work-in-progress art and music</li>
+        <li>Exclusive developer commentary</li>
+        <li>Key dates</li>
+        <li>And maybe even something else...</li>
+      </ul>
+ 
+    </div>
+    <div class="flex flex-col items-center gap-y-5">
       <SubscribeForm client:idle />
     </div>
   </div>

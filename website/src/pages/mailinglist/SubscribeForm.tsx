@@ -78,15 +78,16 @@ const SubscribeForm = () => {
               className="bg-inherit border-white border-2 rounded-md text-center outline-green-500 outline-4"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              placeholder="optional"
             />
           </div>
           {!isLoading && (
             <button
-              className="bg-neutral-700 hover:bg-green-500 ease-linear px-4 py-2 rounded-lg duration-200 outline-green-500 outline-4"
+              className="bg-neutral-700 hover:bg-green-500 ease-linear px-8 py-2 rounded-lg duration-200 outline-green-500 outline-4"
               id="submit"
               onClick={handleOnSubmit}
             >
-              Subscribe
+              SIGN UP!
             </button>
           )}
           {isLoading && <LoaderCircle className="animate-spin" />}
