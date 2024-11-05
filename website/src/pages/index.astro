@@ -1,31 +1,36 @@
 ---
 import { Picture } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import mailingList from "./mail.gif";
+import mailingListStatic from "./mail.jpg";
 import spiritWellImage from "./spiritwell_logo.png";
-import maillingList from "./testmail.gif";
 import wishlistOnSteam from "./wishlist_on_steam.jpg";
-import mailingListStatic from "./testmail.jpg";
 ---
 
 <BaseLayout>
   <section class="flex flex-col items-center">
-    <Picture src={spiritWellImage} alt="Spiritwell logo"/>
+    <Picture src={spiritWellImage} alt="Spiritwell logo" />
     <a href="https://store.steampowered.com/app/1693890/Spiritwell/">
       <Picture src={wishlistOnSteam} alt="Wishlist on Steam" />
-
     </a>
     <p class="text-xl whitespace-pre-line text-center">
-      And now… 
-      Stay updated on development!
+      And now… Stay updated on development!
     </p>
     <a href="/mailinglist" class="relative">
-      <Picture src={maillingList} width="200" height="200" alt="Join our mailing list" />
-      <Picture src={mailingListStatic} alt="Join our mailing list" class="absolute top-0 left-0 hover:opacity-0"/>
+      <Picture src={mailingListStatic} alt="Join our mailing list" />
+      <Picture
+        src={mailingList}
+        width="200"
+        height="200"
+        alt="Join our mailing list"
+        class="top-0 left-0 absolute opacity-0 hover:opacity-100"
+      />
     </a>
-    <p class="text-3xl whitespace-pre-line text-center">
-      Join the
-      SPIRITWELL
-      <span class="text-neutral-500">    MAILING LIST</span>!
-    </p>
+    <a href="/mailinglist">
+      <p class="text-3xl whitespace-pre-line text-center">
+        Join the SPIRITWELL
+        <span class="text-neutral-500"> MAILING LIST</span>!
+      </p>
+    </a>
   </section>
 </BaseLayout>

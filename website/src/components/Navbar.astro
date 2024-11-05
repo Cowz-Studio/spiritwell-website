@@ -2,8 +2,8 @@
 
 ---
 
-<>
-  <nav class="flex justify-center bg-gray-700 m-0 h-auto md:h-14 relative">
+<div>
+  <nav class="hidden md:flex justify-center bg-gray-700 m-0 md:h-14 relative">
     <ul
       class="flex flex-col md:flex-row justify-center items-center gap-x-32 text-2xl w-1/2"
     >
@@ -16,4 +16,89 @@
       <button> Mail, Twitter </button>
     </div>
   </nav>
-</>
+  <nav id="navbar" class="flex flex-col md:hidden items-start bg-gray-700">
+    <div class="flex items-center p-4" id="logo">
+      <div class="hamburger-menu">
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="-0.5 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 12.32H22"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M2 18.32H22"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M2 6.32001H22"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <p>MENU</p>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/game">GAME</a></li>
+      <li><a href="/faq">FAQ</a></li>
+    </ul>
+  </nav>
+</div>
+
+<style>
+  #navbar .nav-links {
+    overflow: hidden;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    transition: max-height 0.3s ease-out;
+  }
+
+  #navbar .nav-links li {
+    display: inline-block;
+    margin-left: 30px;
+  }
+
+  #navbar .nav-links a {
+    text-decoration: none;
+    font-weight: lighter;
+    color: white;
+    font-size: 20px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+    color: white;
+  }
+  #navbar.open .nav-links {
+    max-height: 90px; /* Maximum height to expand to */
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    var navbar = document.getElementById("navbar");
+    if (navbar) {
+      navbar.classList.toggle("open");
+    }
+  }
+
+  document
+    .querySelector(".hamburger-menu")
+    ?.addEventListener("click", toggleMenu);
+</script>
