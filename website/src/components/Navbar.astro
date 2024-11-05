@@ -1,8 +1,8 @@
 ---
-
+const navBarPadding = "p-4";
 ---
 
-<div>
+<div class="text-xl">
   <nav class="hidden md:flex justify-center bg-gray-700 m-0 md:h-14 relative">
     <ul
       class="flex flex-col md:flex-row justify-center items-center gap-x-32 text-2xl w-1/2"
@@ -11,13 +11,9 @@
       <li><a href="/game">GAME</a></li>
       <li><a href="/faq">FAQ</a></li>
     </ul>
-
-    <div class="flex justify-end items-center inset-y-0 right-0 absolute">
-      <button> Mail, Twitter </button>
-    </div>
   </nav>
   <nav id="navbar" class="flex flex-col md:hidden items-start bg-gray-700">
-    <div class="flex items-center p-4" id="logo">
+    <div class=`flex flex-row items-center ${navBarPadding}` id="logo">
       <div class="hamburger-menu">
         <svg
           width="24px"
@@ -46,7 +42,8 @@
             stroke-linejoin="round"></path>
         </svg>
       </div>
-      <p>MENU</p>
+
+      <p class="">MENU</p>
     </div>
     <ul class="nav-links">
       <li><a href="/">HOME</a></li>
@@ -54,6 +51,11 @@
       <li><a href="/faq">FAQ</a></li>
     </ul>
   </nav>
+  <div
+    class=`flex justify-end items-center top-0 right-0 absolute ${navBarPadding}`
+  >
+    <button> Mail, Twitter </button>
+  </div>
 </div>
 
 <style>
@@ -68,15 +70,12 @@
   }
 
   #navbar .nav-links li {
-    display: inline-block;
-    margin-left: 30px;
+    padding: 1rem 0;
   }
 
   #navbar .nav-links a {
     text-decoration: none;
-    font-weight: lighter;
     color: white;
-    font-size: 20px;
   }
 
   .hamburger-menu {
@@ -86,7 +85,7 @@
     color: white;
   }
   #navbar.open .nav-links {
-    max-height: 90px; /* Maximum height to expand to */
+    max-height: 12rem; /* Maximum height to expand to */
   }
 </style>
 
