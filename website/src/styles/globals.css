@@ -3,19 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Spiritwell';
-  src: url('/font/spiritwell.ttf')  format('truetype');
-} 
+  font-family: "Spiritwell";
+  src: url("/font/spiritwell.ttf") format("truetype");
+  font-display: swap;
+}
 
-@layer base{
-  body{
+@layer base {
+  body {
     @apply font-spiritwell;
     @apply bg-black;
     @apply text-white;
-    @apply  outline-4;
+    @apply outline-4;
     @apply outline-green-500;
-
   }
 }
-
-
