@@ -1,5 +1,4 @@
 ---
-import { AstroSeo } from "@astrolib/seo";
 import { Picture } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import mailingList from "./mail.gif";
@@ -8,33 +7,6 @@ import spiritWellImage from "./spiritwell_logo.png";
 import wishlistOnSteam from "./wishlist_on_steam.jpg";
 ---
 
-<head>
-  <AstroSeo
-    title="SPIRITWELL"
-    description="Play as a runaway lost child who stumbles across a strange well and falls in... Below, a world full of strange spirits await."
-    openGraph={{
-      url: "https://spiritwell-website.pages.dev/",
-      title: "SPIRITWELL",
-      description:
-        "Play as a runaway lost child who stumbles across a strange well and falls in... Below, a world full of strange spirits await.",
-      images: [
-        {
-          url: mailingListStatic.src,
-          width: 200,
-          height: 200,
-          alt: "Mailing list image",
-          type: "image/webp",
-        },
-      ],
-      site_name: "SPIRITWELL",
-    }}
-    twitter={{
-      cardType: "summary_large_image", // Use "summary_large_image" or "summary" for smaller previews
-      site: "@spiritwellgame", // Replace with your Twitter handle
-      handle: "@spiritwellgame",
-    }}
-  />
-</head>
 <BaseLayout>
   <section class="flex flex-col items-center">
     <Picture src={spiritWellImage} alt="Spiritwell logo" />
