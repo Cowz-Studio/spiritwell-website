@@ -1,4 +1,5 @@
 ---
+import { AstroSeo } from "@astrolib/seo";
 import { Picture } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import mailingList from "./mail.gif";
@@ -7,6 +8,16 @@ import spiritWellImage from "./spiritwell_logo.png";
 import wishlistOnSteam from "./wishlist_on_steam.jpg";
 ---
 
+<AstroSeo
+  title="SPIRITWELL"
+  description="Play as a runaway lost child who stumbles across a strange well and falls in... Below, a world full of strange spirits await."
+  twitter={{
+    site: "@spiritwellgame",
+    cardType: "summary_large_image",
+    handle: "@spiritwellgame",
+  }}
+  canonical="https://spiritwell-website.pages.dev/"
+/>
 <BaseLayout>
   <section class="flex flex-col items-center">
     <Picture src={spiritWellImage} alt="Spiritwell logo" />
