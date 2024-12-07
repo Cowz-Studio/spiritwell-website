@@ -1,7 +1,21 @@
 ---
+import { AstroSeo } from "@astrolib/seo";
 import Navbar from "../components/Navbar.astro";
 import "../styles/globals.css";
+
+// NEW! Join the SPIRITWELL mailing list for updates on development!
 ---
+
+<AstroSeo
+  title="SPIRITWELL"
+  description="Play as a runaway lost child who stumbles across a strange well and falls in... Below, a world full of strange spirits await."
+  twitter={{
+    site: "@spiritwellgame",
+    cardType: "summary_large_image",
+    handle: "@spiritwellgame",
+  }}
+  canonical="https://spiritwell.net"
+/>
 
 <html lang="en">
   <head>
