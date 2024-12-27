@@ -9,6 +9,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://spiritwell-website.pages.dev/",
+  site: "https://spiritwell.net/",
   integrations: [tailwind(), react(), sitemap()]
 });
