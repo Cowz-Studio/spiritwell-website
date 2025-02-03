@@ -31,8 +31,9 @@ const SubscribeForm = () => {
       const response = await fetch(url, {
         method: "POST",
         mode: "no-cors",
+        redirect: "follow",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "text/plain",
         },
       });
       return response;
